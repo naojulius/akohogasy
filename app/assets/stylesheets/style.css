@@ -1,0 +1,213 @@
+.chicken6{
+  width: 35%;
+}
+.chicken-eye-left{
+width: 0.7%;
+position: absolute;
+margin-top: 5.3%;
+margin-left: 10.1%;
+}
+.chicken-eye-right{
+width: 0.7%;
+position: absolute;
+margin-left: 7.6%;
+margin-top: 5.1%;
+}
+.yay{
+position: absolute;
+width: 17%;
+margin-top: 10px;
+margin-left: 14%;
+}
+.center{
+  margin-left: 38%;
+}
+.a{
+  background-color: lightgrey;
+   box-shadow:   0px 0px 29px -2px lightgrey;
+}
+#notification{
+
+background-color: #67dd5b66;;
+position: absolute;
+
+border-radius: 0px 0px 8px 8px;
+width: 33%;
+text-align: center;
+font-size: 113%;
+margin-left: 36%;
+font-family: machinescript;
+padding-top: 1%
+}
+.b{
+border: 1px solid #428d2a99;
+margin: auto; 
+}
+.signin{
+position: absolute;
+margin-left: 32%;
+margin-top: -37%;
+background-color: white;
+box-shadow: 0px 0px 6px 0px #bc7976;
+}
+.btnsignin{
+margin-left: 78%;
+}
+.signup{
+position: absolute;
+margin-left: 32%;
+margin-top: -37%;
+background-color: white;
+box-shadow: 0px 0px 6px 0px green;
+}
+.btnsignup{
+margin-left: 78%;
+}
+#cntnair{
+margin-top: 10%;
+margin-bottom: 17%;
+}
+.navbar1{
+background-color: white;
+box-shadow: 0px 2px 15px -2px #136513;
+position: relative;
+width: 100%;
+margin-top: 0%;
+height: 25%;
+}
+.newakoho{
+margin: auto;
+}
+.caroussel-image{
+width: 100%;
+height: 300px;
+margin: auto;
+}
+.logo{
+  width:8%;
+}
+#title-akoho{
+margin-left: 43%;
+margin-top: 3%;
+color: green;
+font-size: 50px;
+}
+#title-story{
+color: #0b3504;
+text-align: center;
+font-family: cursive;
+}
+.create-new-akoho{
+margin-left: 46%;
+}
+#table-container{
+max-width: 100%;
+}
+.egg-facebook{
+width: 40px;
+}
+.egg-facebook:hover{
+width: 50px;
+}
+.egg-twitter{
+width: 40px;
+}
+.egg-twitter:hover{
+width: 50px;
+}
+.egg-google{
+width: 40px;
+}
+.egg-google:hover{
+width: 50px;
+}
+.social-container{
+height: 60px;
+width: 141px;
+padding-top: 9px;
+display: flex;
+justify-content: space-around;
+}
+#title{
+   background-color: #7c966a1a;;
+   text-align: center;
+   margin-top: 3%;
+   font-family: MachineScript;
+   color: #691c45;
+}
+.description{
+	background-color: green;
+	color: white;
+}
+.buttons{
+	text-align: center;
+}
+.clickhere{
+	position: absolute;
+	width: 20%;
+	background-color: blue;
+	height: 10%;
+}
+.sold{
+width: 13%;
+margin-left: -39%;
+margin-top: -52%;
+background-color: gold;
+border-radius: 38px 42px 43px 5px;
+box-shadow: 0px 0px 5px 0px #3635184d;
+}
+#sold-message{
+	background-color:#3e8c26;
+	padding: 3% 0% 3% 7%;
+	color: white;
+	border-radius: 1px 91px 0px 91px;
+}
+#border{
+	border: 1px solid black;
+	width: 20%;
+	margin: auto;
+}
+.image_sold{
+	width:100%;
+	height:100%;
+}
+.img_s {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+} 
+
+.img_s:hover {
+    border: 1px solid #777;
+}
+
+.img_s {
+    width: 204px;
+    height: 242px;
+    box-shadow: 0px -7px 7px 1px #0080004d;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+    text-align: center;
+    box-shadow: 0px 8px 11px -2px #00800066;
+}
+.sign-in-sign-up{
+	background-color: blue;
+}
+.landing-page{
+	box-shadow: 0px 0px 6px 3px #8080804d;
+}
+.landing-message-container{
+padding: 12% 0% 20% 7%;
+background-color: green;
+color: white;
+border-radius: 1% 1% 29% 29%;
+font-size: 17px;
+font-family: Aint Nothing Fancy;
+}
+.browse-now-button{
+	margin: auto;
+}

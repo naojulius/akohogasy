@@ -1,0 +1,42 @@
+<% if user_signed_in? %>
+<h1>Buy Characters</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Image sold</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @buy_characters.each do |buy_character| %>
+      <tr>
+        <td><%= image_tag buy_character.image_sold.thumb.url %></td>
+        <td><%= buy_character.description %></td>
+        <td><%= buy_character.price %></td>
+        <td><%= link_to 'Show', buy_character %></td>
+        <td><%= link_to 'Edit', edit_buy_character_path(buy_character) %></td>
+        <td><%= link_to 'Destroy', buy_character, method: :delete, data: { confirm: 'Are you sure?' } %></td>    </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'New Buy Character', new_buy_character_path %>
+<% else %>
+<h1>Buy Characters</h1>
+
+    <% @buy_characters.each do |buy_character| %>
+<div class="img_s">
+  
+    <%= image_tag buy_character.image_sold.url, class:"image_sold"  %>
+  </br>
+  <div class="desc"> <%= buy_character.description %></br>
+    <%= buy_character.price %> </br>
+   <button class="btn btn-success">buy</button> 
+  </div>
+</div>
+   <% end %>
+  </div>
+</div>
+<% end %>

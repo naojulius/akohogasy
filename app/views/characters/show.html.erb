@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag  @character.image.thumb.url %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @character.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @character.description %>
+</p>
+
+<p>
+  <strong>History:</strong>
+  <%= @character.history %>
+</p>
+
+<%= link_to 'Edit', edit_character_path(@character), class:"btn btn-warning" %> 
+<%= link_to 'Back', characters_path, class:"btn btn-info" %>

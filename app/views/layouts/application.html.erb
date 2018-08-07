@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AKoho</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+  
+
+  </head>
+
+  <body>
+ <% if user_signed_in?%> 
+    <nav class="navbar navbar-inverse navbar1">
+
+<%= image_tag "logo.png", class:"logo" %>
+  <div>
+
+   <i class="fa"><%= link_to "", home_index_path, class:"btn btn-outline-danger fa-home " %></i>
+   <i class="fa">  <%= link_to "Characters", characters_path, class:"btn btn-outline-success" %></i>
+   <i class="fa">  <%= link_to "Sell", buy_characters_path, class:"btn btn-outline-danger" %></i>
+   <i class="fa"> <%= link_to "About", about_index_path, class:"btn btn-outline-secondary" %></i>
+    
+  </div>
+  <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2 searchbar" type="text" placeholder="Name">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i>Search Akoho</button>
+    </form>
+
+<!-- if the current user is the current user, then do not display the social media buttonss -->
+    <% if current_user.email === "sobantu.admin@sobantu.co.za" %>
+    <% else %>
+    <div class="social-container">
+      <a href="https://m.facebook.com" > <%= image_tag "social/facebook.svg", class:"egg-facebook" %> </a>
+      <a href="https://m.facebook.com" ><%= image_tag "social/twitter.svg", class:"egg-twitter" %></a>
+      <a href="https://m.facebook.com" ><%= image_tag "social/google-plus.svg", class:"egg-google" %></a>
+    </div>
+    <% end %>
+<!-- end --> 
+   
+   <%= link_to "Sign Out", destroy_user_session_path, method: :delete,  class:"btn btn-danger" %>
+  </nav>
+   <% else %>
+   <nav class="navbar navbar-inverse navbar1">
+
+    <%= image_tag "logo.png", class:"logo" %>
+  <div>
+
+   <i class="fa">  <%= link_to "home", home_index_path, class:"btn btn-outline-danger " %>  </i>
+   <i class="fa">  <%= link_to "Characters", characters_path, class:"btn btn-outline-success" %>  </i>
+   <i class="fa">  <%= link_to "About", about_index_path, class:"btn btn-outline-secondary" %>  </i>
+    
+  </div>
+
+<!-- end --> 
+   <div>
+<%= link_to "sign in", new_user_session_path, class:"btn btn-danger" %>
+<%= link_to "Sign up", new_user_registration_path, class:"btn btn-success" %>
+ </div>
+  </nav>
+   <% end%>
+
+      <% if notice %>   
+      <div id="notification" >
+       <p class="notice "><%= notice %></p>
+       </div>
+      <% elsif alert %>
+      <div id="notification">
+       <p class="alert"><%= alert %></p>
+       </div>
+      <% end %>  
+      <script type="text/javascript">
+        $(document).ready(function(){
+          setTimeout(function(){
+            $("#notification").fadeOut("slow", function(){
+            $(this).remove();
+          })
+         
+          }, 1000);
+        });
+      </script>
+       <%= yield %>
+  </body>
+  </body>
+  </body>
+</html>

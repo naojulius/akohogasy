@@ -1,0 +1,39 @@
+
+<% if user_signed_in? %>
+<h1 id="title-akoho">Characters</h1>
+
+<%= link_to 'New Character', new_character_path, class:"btn btn-info" %>
+ <%= will_paginate @characters, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-end) %>
+
+    <% @characters.each do |character| %>
+    
+        <div id="table-container">
+          <table class="col-md-6 b">
+              <div  id="title"><h1><%= character.name %></h1></div>
+              <td>
+                  <%= image_tag character.image.thumb.url %></br>
+                  
+                  <div class="col-md-9 description" ><div><%= character.description %>    
+              </td>
+        
+        
+        <td class="col-md-9"><%= character.history[0..250] %></td>
+      </br>
+
+           </table>
+         </div>  </br>
+  <div class="buttons">
+        <td><%= link_to 'Show', character, class:"btn btn-success" %></td>
+        <td><%= link_to 'Edit', edit_character_path(character), class:"btn btn-info" %></td>
+        <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
+  </div>      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= will_paginate @characters, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-end) %>
+<% else %>
+<% end%>
+
+

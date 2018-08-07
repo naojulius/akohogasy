@@ -1,0 +1,26 @@
+</br>
+<% if user_signed_in? %>
+welcome <h3 style="color: green"><%= current_user.email %></h3></br>
+ <%= @mes %>
+<% else %>
+<table>
+<tbody>
+<td class="col-md-6">
+	
+<%= image_tag "G.png" %>
+</td>
+
+<td class="col-md-6 border landing-page">
+<%= image_tag "10.png", class:"10"	 %>	</br>
+<div style="height:20px;"></div>
+<div class="landing-message-container">
+Hey! </br> 
+whach out our new characters. we have special offers, </br> if you buy 10 characters, you can claim your two new characters.
+</div>
+</br>
+<div style="height:10px;"></div>
+	<%= link_to "Browse Now", buy_characters_path, class:"btn btn-success browse-now-button" %>			    
+</td>
+</tbody>
+</table>
+<% end %>
