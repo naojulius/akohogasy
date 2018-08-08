@@ -211,3 +211,32 @@ font-family: Aint Nothing Fancy;
 .browse-now-button{
 	margin: auto;
 }
+.land-image{
+  width:100%;
+  margin-top: -4%;
+}
+.message{
+position: absolute;
+margin-top: -17%;
+background-color: #d10353;
+color: white;
+font-size: 44px;
+font-family: machinescript;
+padding: 2%;
+text-align: center;
+box-shadow: 0px 0px 6px 7px #240606b3;
+}
+.add-height{
+  height: 35%;
+}
+.history-t{
+position: absolute;
+margin: -8% 0% 0% 25%;
+background-color: white;
+text-align: center;
+font-size: 43px;
+border-radius: 0% 0% 90% 90%;
+color: green;
+font-family: sweethoney;
+box-shadow: 0px 17px 36px 8px black;
+}
