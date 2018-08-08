@@ -2,6 +2,7 @@
 <% if user_signed_in? %>
 welcome <h3 style="color: green"><%= current_user.email %></h3></br>
  <%= @mes %>
+ <%= link_to "buy", charges_new_path %>
 <% else %>
 <%= image_tag "land.png", class: "land-image" %>
 <div class="message col-md-12"> Rangotra sy Fantsy </div>

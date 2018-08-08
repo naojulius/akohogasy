@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'charges/new'
+  get 'charges/create'
+  resources :charges 
   resources :buy_characters
   resources :characters
   get 'about/index'
